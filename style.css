@@ -1,0 +1,89 @@
+:root {
+    /* Layout breakpoints */
+    --mobile-width: 375px;   /* Mobile design width */
+    --desktop-width: 1440px;  /* Desktop design width */
+
+    /* Colors */
+    --color-dark-cyan: hsl(158, 36%, 37%);
+    --color-cream: hsl(30, 38%, 92%);
+    --color-very-dark-blue: hsl(212, 21%, 14%);
+    --color-dark-grayish-blue: hsl(228, 12%, 48%);
+    --color-white: hsl(0, 0%, 100%);
+
+    /* Typography */
+    --font-size-paragraph: 14px;
+    --font-family-montserrat: 'Montserrat', sans-serif;
+    --font-weight-montserrat-normal: 500;
+    --font-weight-montserrat-bold: 700;
+    --font-family-fraunces: 'Fraunces', serif;
+    --font-weight-fraunces-bold: 700;
+}
+
+body {
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-paragraph);
+    color: var(--color-very-dark-blue);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-family-fraunces);
+    font-weight: var(--font-weight-fraunces-bold);
+}
+
+p {
+    font-size: var(--font-size-paragraph);
+    color: var(--color-dark-grayish-blue);
+}
+
+button {
+    background-color: var(--color-dark-cyan);
+    color: var(--color-white);
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-cream);
+    color: var(--color-dark-cyan);
+}
+
+/* Mobile Styles */
+@media (max-width: var(--mobile-width)) {
+    body {
+        font-size: 12px; /* Adjusting font size for mobile */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Modify heading size for mobile */
+    }
+
+    h2 {
+        font-size: 1.25em; /* Modify subheading sizes for mobile */
+    }
+
+    button {
+        padding: 0.5em; /* Adjust padding for buttons on mobile */
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: var(--desktop-width)) {
+    body {
+        margin: 0 auto; /* Center content */
+        max-width: var(--desktop-width); /* Limit max width */
+    }
+
+    h1 {
+        font-size: 2em; /* Modify heading size for desktop */
+    }
+
+    h2 {
+        font-size: 1.75em; /* Modify subheading sizes for desktop */
+    }
+
+    button {
+        padding: 0.75em 1.5em; /* Increase button padding for desktop */
+    }
+}
